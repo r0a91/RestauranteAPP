@@ -8,7 +8,20 @@
 module.exports = {
 
   attributes: {
-
+    deOrden:{
+      model:'orden'
+    },
+    entrada:{
+      model:'entrada'
+    },
+    platoFuerte:{
+      model:'plato_fuerte'
+    },
+    bebida:{
+      model:'bebida'
+    },
+    postre:{
+      model:'postre'
+    }
   }
 };
-

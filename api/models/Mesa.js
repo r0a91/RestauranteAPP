@@ -8,7 +8,15 @@
 module.exports = {
 
   attributes: {
-
+    ordenes:{
+      collection:'orden',
+      via:'mesa'
+    },
+    ubicacion:{
+      type:'integer',
+    },
+    estado:{
+      type:'string'
+    }
   }
 };
-

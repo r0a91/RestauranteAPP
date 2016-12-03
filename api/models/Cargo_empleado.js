@@ -8,7 +8,14 @@
 module.exports = {
 
   attributes: {
-
+    nombre:{
+      type:'string'
+    },
+    salario:{
+      type:'float'
+    },
+    description:{
+      type:'string'
+    }
   }
 };
-

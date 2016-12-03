@@ -8,7 +8,17 @@
 module.exports = {
 
   attributes: {
-
+    principio:{
+      model:'principio'
+    },
+    carbohidrato:{
+      model:'carbohidrato'
+    },
+    proteina:{
+      model:'proteina'
+    },
+    acompanamiento:{
+      model:'acompanamiento'
+    }
   }
 };
-

@@ -8,7 +8,15 @@
 module.exports = {
 
   attributes: {
-
+    platos:{
+      collection: 'plato',
+      via: 'deOrden'
+    },
+    empleado:{
+      model:'empleado'
+    },
+    mesa:{
+      model:'mesa'
+    },
   }
 };
-
