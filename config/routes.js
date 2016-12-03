@@ -33,10 +33,13 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {view: 'index'},
-  '/createmesa': {view: 'mesa/createMesa'},
-  '/createorden': {view: 'orden/createOrden'},
-  '/createplato': {view: 'plato/createPlato'},
-  '/createplatofuerte': {view: 'platoFuerte/createPlatoFuerte'},
+  '/createmesa': {controller:'MesaController', action: 'new'},
+  '/createcarbohidrato': {controller:'CarbohidratoController', action: 'new'},
+  '/createproteina': {controller:'ProteinaController', action: 'new'},
+  '/createacompanamiento': {controller:'AcompanamientoController', action: 'new'},
+  '/createprincipio': {controller:'PrincipioController', action: 'new'},
+
+
 
   /***************************************************************************
   *                                                                          *

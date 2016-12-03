@@ -14,9 +14,11 @@ module.exports = {
     },
     ubicacion:{
       type:'integer',
+      required:true
     },
     estado:{
-      type:'string'
+      type:'string',
+      required:true
     }
   }
 };

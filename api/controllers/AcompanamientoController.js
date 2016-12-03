@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
+	new: function(req, res){
+		console.log('entre al formulario de crear Acompanamiento');
+		res.view('platoFuerte/createAcompanamiento');
+	}
 };
-

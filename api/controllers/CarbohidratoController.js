@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
+	new: function(req, res){
+		console.log('entre al formulario de crear Carbohidrato');
+		res.view('platoFuerte/createCarbohidrato');
+	}
 };
-
