@@ -1,0 +1,16 @@
+<div class="componentes container">
+  <div class="row">
+    <ul>
+      <% _.each(componentes, function (componente) { %>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <li>
+            <div class="checkbox">
+              <label class="checkbox-inline"><input type="checkbox" value="componente"><%= componente.nombre%></label>
+              <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+            </div>
+          </li>
+        </div>
+        <% }) %>
+    </ul>
+  </div>
+</div>

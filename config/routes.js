@@ -39,6 +39,10 @@ module.exports.routes = {
   'GET /createacompanamiento': {controller:'AcompanamientoController', action: 'new'},
   'GET /createprincipio': {controller:'PrincipioController', action: 'new'},
   'GET /createplatofuerte': {controller:'PlatoFuerteController', action: 'new'},
+  'GET /listarprincipio': {controller:'PrincipioController', action: 'listar'},
+  'GET /listarcarbohidrato': {controller:'CarbohidratoController', action: 'listar'},
+  'GET /listarproteina': {controller:'ProteinaController', action: 'listar'},
+  'GET /listaracompanamiento': {controller:'AcompanamientoController', action: 'listar'},
 
 
 

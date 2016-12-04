@@ -9,7 +9,8 @@ module.exports = {
 	new: function(req, res){
 		console.log('entre al formulario de crear Acompanamiento');
 		res.view('platoFuerte/createAcompanamiento');
-	}, create: function (req, res) {
+	},
+	create: function (req, res) {
 
 		var obj={
 			nombre: req.param('nombre'),
@@ -23,6 +24,17 @@ module.exports = {
 				return;
 			}
 			res.redirect('acompanamiento')
+		})
+	},
+	listar: function (req, res, next) {
+		Acompanamiento.find(function (err, objs) {
+			if (err) {
+				console.log(err);
+				return next(err);
+			}
+			return res.view('partials/componentes', {
+				componentes:objs
+			})
 		})
 	}
 };

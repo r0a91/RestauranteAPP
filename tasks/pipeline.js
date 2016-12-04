@@ -84,5 +84,5 @@ module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPat
   if (tplPath[0] === '!') {
     return require('path').join('!assets/', tplPath.substr(1));
   }
-  return require('path').join('assets/',tplPath);
+  return require('path').join('assets/', tplPath);
 });
