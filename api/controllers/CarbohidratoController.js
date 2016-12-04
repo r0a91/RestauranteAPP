@@ -9,5 +9,20 @@ module.exports = {
 	new: function(req, res){
 		console.log('entre al formulario de crear Carbohidrato');
 		res.view('platoFuerte/createCarbohidrato');
+	}, create: function (req, res) {
+
+		var obj={
+			nombre: req.param('nombre'),
+			imagen: req.param('imagen')
+		}
+
+		Carbohidrato.create(obj, function(err, acom){
+			if (err) {
+				console.log(err);
+				res.redirect('carbohidrato/new')
+				return;
+			}
+			res.redirect('carbohidrato')
+		})
 	}
 };

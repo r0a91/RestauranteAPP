@@ -33,11 +33,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {view: 'index'},
-  '/createmesa': {controller:'MesaController', action: 'new'},
-  '/createcarbohidrato': {controller:'CarbohidratoController', action: 'new'},
-  '/createproteina': {controller:'ProteinaController', action: 'new'},
-  '/createacompanamiento': {controller:'AcompanamientoController', action: 'new'},
-  '/createprincipio': {controller:'PrincipioController', action: 'new'},
+  'GET /createmesa': {controller:'MesaController', action: 'new'},
+  'GET /createcarbohidrato': {controller:'CarbohidratoController', action: 'new'},
+  'GET /createproteina': {controller:'ProteinaController', action: 'new'},
+  'GET /createacompanamiento': {controller:'AcompanamientoController', action: 'new'},
+  'GET /createprincipio': {controller:'PrincipioController', action: 'new'},
+  'GET /createplatofuerte': {controller:'PlatoFuerteController', action: 'new'},
 
 
 

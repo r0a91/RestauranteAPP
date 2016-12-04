@@ -9,5 +9,20 @@ module.exports = {
 	new: function(req, res){
 		console.log('entre al formulario de crear Acompanamiento');
 		res.view('platoFuerte/createAcompanamiento');
+	}, create: function (req, res) {
+
+		var obj={
+			nombre: req.param('nombre'),
+			imagen: req.param('imagen')
+		}
+
+		Acompanamiento.create(obj, function(err, acom){
+			if (err) {
+				console.log(err);
+				res.redirect('acompanamiento/new')
+				return;
+			}
+			res.redirect('acompanamiento')
+		})
 	}
 };

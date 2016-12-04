@@ -6,6 +6,8 @@
  */
 
 module.exports = {
-	
+	new: function (req, res) {
+		console.log('Entre al formulario de crearPlatoFuerte');
+		res.view('platoFuerte/createPlatoFuerte');
+	}
 };
-

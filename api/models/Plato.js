@@ -15,7 +15,7 @@ module.exports = {
       model:'entrada'
     },
     platoFuerte:{
-      model:'plato_fuerte'
+      model:'platoFuerte'
     },
     bebida:{
       model:'bebida'

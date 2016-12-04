@@ -12,12 +12,12 @@ module.exports = {
 	},
 	create: function (req, res) {
 
-		var mesaObj = {
+		var obj = {
 				ubicacion: req.param('ubicacion'),
 				estado: req.param('estado')
 		}
 
-		Mesa.create(mesaObj, function (err, user) {
+		Mesa.create(obj, function (err, mesa) {
 			if (err) {
 				console.log(err);
 				res.redirect('mesa/new')
