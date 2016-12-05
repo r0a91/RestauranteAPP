@@ -75,6 +75,30 @@ module.exports.routes = {
     controller: 'AcompanamientoController',
     action: 'listar'
   },
+  'GET /createbebida': {
+    controller: 'BebidaController',
+    action: 'new'
+  },
+  'GET /createpostre': {
+    controller: 'PostreController',
+    action: 'new'
+  },
+  'GET /createentrada': {
+    controller: 'EntradaController',
+    action: 'new'
+  },
+  'GET /listarbebida': {
+    controller: 'BebidaController',
+    action: 'listar'
+  },
+  'GET /listarentrada': {
+    controller: 'EntradaController',
+    action: 'listar'
+  },
+  'GET /listarpostre': {
+    controller: 'PostreController',
+    action: 'listar'
+  },
 
 
 

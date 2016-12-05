@@ -91,10 +91,10 @@ module.exports = {
   },
   create: function(req, res, next) {
     var obj ={
-      principio: req.param('idPrincipio'),
-      carbohidrato:req.param('idCarbohidrato'),
-      proteina:req.param('idProteina'),
-      acompanamiento:req.param('idAcompanamiento')
+      principios: req.param('idPrincipio'),
+      carbohidratos:req.param('idCarbohidrato'),
+      proteinas:req.param('idProteina'),
+      acompanamientos:req.param('idAcompanamiento')
     }
     PlatoFuerte.create(obj, function (err, acom) {
       if (err) {
