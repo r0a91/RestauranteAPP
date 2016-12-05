@@ -16,7 +16,8 @@ module.exports = {
       type: 'string'
     },
     owner: {
-      model: 'platoFuerte'
+      collection: 'platoFuerte',
+      via: 'proteinas'
     }
   }
 };

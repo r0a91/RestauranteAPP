@@ -10,19 +10,23 @@ module.exports = {
   attributes: {
     principios: {
       collection: 'principio',
-      via: 'owner'
+      via: 'owner',
+      dominant: true
     },
     carbohidratos: {
       collection: 'carbohidrato',
-      via: 'owner'
+      via: 'owner',
+      dominant: true
     },
     proteinas: {
       collection: 'proteina',
-      via: 'owner'
+      via: 'owner',
+      dominant: true
     },
     acompanamientos: {
       collection: 'acompanamiento',
-      via: 'owner'
+      via: 'owner',
+      dominant: true
     }
   }
 };
