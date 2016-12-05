@@ -14,6 +14,9 @@ module.exports = {
     },
     imagen:{
       type:'string'
+    },
+    owner: {
+      model: 'platoFuerte'
     }
   }
 };

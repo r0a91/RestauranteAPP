@@ -8,17 +8,21 @@
 module.exports = {
 
   attributes: {
-    principio:{
-      model:'principio'
+    principio: {
+      collection: 'principio',
+      via: 'owner'
     },
-    carbohidrato:{
-      model:'carbohidrato'
+    carbohidrato: {
+      collection: 'carbohidrato',
+      via: 'owner'
     },
-    proteina:{
-      model:'proteina'
+    proteina: {
+      collection: 'proteina',
+      via: 'owner'
     },
-    acompanamiento:{
-      model:'acompanamiento'
+    acompanamiento: {
+      collection: 'acompanamiento',
+      via: 'owner'
     }
   }
 };

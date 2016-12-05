@@ -8,12 +8,15 @@
 module.exports = {
 
   attributes: {
-    nombre:{
-      type:'string',
-      required:true
+    nombre: {
+      type: 'string',
+      required: true
     },
-    imagen:{
-      type:'string'
+    imagen: {
+      type: 'string'
+    },
+    owner: {
+      model: 'platoFuerte'
     }
   }
 };

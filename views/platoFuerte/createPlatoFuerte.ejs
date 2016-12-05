@@ -1,8 +1,93 @@
 <div class="container">
   <h1>FORMULARIO PARA CREAR PLATOFUERTE</h1>
-  <form class="form-newPlatoFuerte" action="/platoFuerte/create" method="post">
-    <div class="principios-control">
-      <% %>
+
+  <form class="form-newMesa" action="/platoFuerte/create" method="post">
+
+    <div class="componentes container">
+      <div class="row">
+        <ul>
+          <% _.each(acompanamientos, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="checkbox">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idAcompanamiento" type="checkbox" value="<%= componente.id%>"><%= componente.nombre%> <%= componente.id%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
     </div>
+
+    <div class="componentes container">
+      <div class="row">
+        <ul>
+          <% _.each(proteinas, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="checkbox">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idProteina" type="checkbox" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="componentes container">
+      <div class="row">
+        <ul>
+          <% _.each(carbohidratos, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="checkbox">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idCarbohidrato" type="checkbox" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="componentes container">
+      <div class="row">
+        <ul>
+          <% _.each(principios, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="checkbox">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idPrincipio" type="checkbox" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <input type="submit" class="btn-primary" />
   </form>
+
 </div>
