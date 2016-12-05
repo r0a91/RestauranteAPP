@@ -1,6 +1,9 @@
 .checkbox{
   display: block;
 }
+.row.radio{
+  display: block;;
+}
 .img-componente {
   max-width: : 220px;
   height: 200px

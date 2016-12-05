@@ -99,6 +99,12 @@ module.exports.routes = {
     controller: 'PostreController',
     action: 'listar'
   },
+  'GET /createplato': {
+    controller: 'PlatoController',
+    action: 'new'
+  },
+  
+
 
 
 

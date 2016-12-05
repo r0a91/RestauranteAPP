@@ -1,1 +1,133 @@
-<h1>FORMULARIO PARA CREAR PLATO</h1>
+<div class="container">
+  <h1>FORMULARIO PARA CREAR PLATO</h1>
+
+  <form class="form-newMesa" action="/plato/create" method="post">
+
+    <div class="componentes container">
+      <h2>ENTRADAS</h2>
+      <div class="row">
+        <ul>
+          <% _.each(entradas, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="radio">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idEntrada" type="radio" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="componentes container">
+      <h2>BEBIDAS</h2>
+      <div class="row">
+        <ul>
+          <% _.each(bebidas, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="radio">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idBebida" type="radio" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="componentes container">
+      <h2>POSTRES</h2>
+      <div class="row">
+        <ul>
+          <% _.each(postres, function (componente) { %>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+              <li>
+                <div class="radio">
+                  <div class="row">
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= componente.imagen%>" alt="">
+                  </div>
+                  <div class="row">
+                    <label class="checkbox-inline"><input name="idPostre" type="radio" value="<%= componente.id%>"><%= componente.nombre%></label>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="componentes container">
+      <h2>PLATOS FUERTES</h2>
+      <ul>
+        <% _.each(platosfuertes, function (componente) { %>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <li>
+              <input name="idPlatoFuerte" type="radio" value="<%= componente.id%>">
+              <div class="row">
+                <div class="radio">
+                  <%console.log(componente)
+                        if (componente.principios){
+                          _.each(componente.principios, function(prin){%>
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= prin.imagen%>" alt="">
+                    <%
+                          })
+                        }
+                      %>
+                </div>
+
+                <div class="radio">
+                  <%console.log(componente)
+                        if (componente.carbohidratos){
+                          _.each(componente.carbohidratos, function(prin){%>
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= prin.imagen%>" alt="">
+                    <%
+                          })
+                        }
+                      %>
+                </div>
+
+                <div class="radio">
+                  <%console.log(componente)
+                        if (componente.proteinas){
+                          _.each(componente.proteinas, function(prin){%>
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= prin.imagen%>" alt="">
+                    <%
+                          })
+                        }
+                      %>
+                </div>
+
+                <div class="radio">
+                  <%console.log(componente)
+                        if (componente.acompanamientos){
+                          _.each(componente.acompanamientos, function(prin){%>
+                    <img class="img-componente img-responsive img-thumbnail" src="<%= prin.imagen%>" alt="">
+                    <%
+                          })
+                        }
+                      %>
+                </div>
+              </div>
+            </li>
+          </div>
+          <% }) %>
+      </ul>
+    </div>
+
+    <input type="submit" class="btn-primary" />
+  </form>
+
+</div>
